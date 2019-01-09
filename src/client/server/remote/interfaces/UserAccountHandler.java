@@ -27,5 +27,4 @@ public interface UserAccountHandler extends Remote {
 
     public void sendMessage(UserModel player1, String Message, UserModel player2) throws RemoteException;
 
-    
 }

@@ -1,4 +1,5 @@
 package client.server.remote.interfaces;
+
 import java.io.Serializable;
 
 /**
@@ -18,7 +19,7 @@ public class UserModel implements Serializable {
     private boolean isOnline;
 
     public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
-        this(ipAddress, userName, password, emailAddress,"available", numberOfWinedMatches, numberOfLostMatches, score, isOnline);
+        this(ipAddress, userName, password, emailAddress, "available", numberOfWinedMatches, numberOfLostMatches, score, isOnline);
     }
 
     public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
@@ -34,7 +35,7 @@ public class UserModel implements Serializable {
         this.isOnline = isOnline;
     }
 
-    public UserModel(String userName, String emailAddress, String password,String ipAddress) {
+    public UserModel(String userName, String emailAddress, String password, String ipAddress) {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
