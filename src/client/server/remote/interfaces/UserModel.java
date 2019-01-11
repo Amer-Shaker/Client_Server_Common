@@ -1,8 +1,10 @@
 package client.server.remote.interfaces;
 
 import java.io.Serializable;
-import java.rmi.RemoteException;
 
+/**
+ * @author Amer Shaker
+ */
 public class UserModel implements Serializable {
 
     private String ipAddress;
@@ -21,6 +23,7 @@ public class UserModel implements Serializable {
     }
 
     public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)  {
+
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
@@ -39,12 +42,6 @@ public class UserModel implements Serializable {
         this.password = password;
         this.emailAddress = emailAddress;
     }
-
-    public UserModel() throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
 
     public String getIpAddress() {
         return ipAddress;
