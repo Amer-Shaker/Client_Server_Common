@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface UserAccountHandler extends Remote {
 
-    public UserModel login(String emailAddress, String password) throws RemoteException;
+    public UserModel login(ClientInterface client, String emailAddress, String password) throws RemoteException;
 
     public boolean signUp(UserModel user) throws RemoteException;
 
@@ -21,15 +21,13 @@ public interface UserAccountHandler extends Remote {
 
     public List<UserModel> getAllPlayer() throws RemoteException;
 
-    public boolean requestGame(UserModel player1,UserModel player2) throws RemoteException;
+    public boolean requestGame(UserModel player1, UserModel player2) throws RemoteException;
 
     public void transmitMove(Step step) throws RemoteException;
+
     public boolean isServerUponRunning() throws RemoteException;
 
     public void sendMessage(UserModel player1, String Message, UserModel player2) throws RemoteException;
-    public void acceptRequest()  throws RemoteException;
 
-
-
-    
+    public void acceptRequest() throws RemoteException;
 }

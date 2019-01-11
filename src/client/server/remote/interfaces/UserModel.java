@@ -17,13 +17,16 @@ public class UserModel implements Serializable {
     private int numberOfMatches;
     private long score;
     private boolean isOnline;
+    private ClientInterface clientInterface;
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)  {
+    public UserModel() {
+    }
+
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
         this(ipAddress, userName, password, emailAddress, "available", numberOfWinedMatches, numberOfLostMatches, score, isOnline);
     }
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)  {
-
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
@@ -43,10 +46,10 @@ public class UserModel implements Serializable {
         this.emailAddress = emailAddress;
     }
 
+
     
 
-    public UserModel() {
-    }
+  
 
     public String getIpAddress() {
         return ipAddress;
@@ -126,5 +129,13 @@ public class UserModel implements Serializable {
 
     public void setOnline(boolean online) {
         isOnline = online;
+    }
+
+    public void setClientInterface(ClientInterface clientInterface) {
+        this.clientInterface = clientInterface;
+    }
+
+    public ClientInterface getClientInterface() {
+        return clientInterface;
     }
 }
