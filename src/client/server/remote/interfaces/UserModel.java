@@ -17,7 +17,6 @@ public class UserModel implements Serializable {
     private int numberOfMatches;
     private long score;
     private boolean isOnline;
-    private ClientInterface clientInterface;
 
     public UserModel() {
     }
@@ -124,13 +123,5 @@ public class UserModel implements Serializable {
 
     public void setOnline(boolean online) {
         isOnline = online;
-    }
-
-    public void setClientInterface(ClientInterface clientInterface) {
-        this.clientInterface = clientInterface;
-    }
-
-    public ClientInterface getClientInterface() {
-        return clientInterface;
     }
 }
