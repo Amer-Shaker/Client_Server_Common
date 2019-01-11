@@ -43,6 +43,12 @@ public class UserModel implements Serializable {
         this.emailAddress = emailAddress;
     }
 
+    
+
+    public UserModel() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getIpAddress() {
         return ipAddress;
     }

@@ -27,4 +27,9 @@ public interface UserAccountHandler extends Remote {
     public boolean isServerUponRunning() throws RemoteException;
 
     public void sendMessage(UserModel player1, String Message, UserModel player2) throws RemoteException;
+    public void acceptRequest()  throws RemoteException;
+
+
+
+    
 }
