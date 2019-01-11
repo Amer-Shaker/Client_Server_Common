@@ -2,7 +2,7 @@ package client.server.remote.interfaces;
 
 import java.io.Serializable;
 
-public class Step  implements Serializable{
+public class Step implements Serializable {
 
     public String player;
     public int position;
