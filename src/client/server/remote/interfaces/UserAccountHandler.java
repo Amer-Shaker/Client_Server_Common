@@ -24,6 +24,7 @@ public interface UserAccountHandler extends Remote {
     public boolean reuestGae(/*two player */) throws RemoteException;
 
     public void transmitMove(Step step) throws RemoteException;
+    public boolean isServerUponRunning() throws RemoteException;
 
     public void sendMessage(UserModel player1, String Message, UserModel player2) throws RemoteException;
 }
