@@ -2,9 +2,6 @@ package client.server.remote.interfaces;
 
 import java.io.Serializable;
 
-/**
- * @author Amer Shaker
- */
 public class UserModel implements Serializable {
 
     private String ipAddress;
