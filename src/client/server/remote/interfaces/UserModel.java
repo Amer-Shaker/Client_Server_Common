@@ -1,6 +1,7 @@
 package client.server.remote.interfaces;
 
 import java.io.Serializable;
+import java.rmi.RemoteException;
 
 public class UserModel implements Serializable {
 
@@ -15,11 +16,11 @@ public class UserModel implements Serializable {
     private long score;
     private boolean isOnline;
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)throws RemoteException {
         this(ipAddress, userName, password, emailAddress, "available", numberOfWinedMatches, numberOfLostMatches, score, isOnline);
     }
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) {
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) throws RemoteException {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
@@ -32,14 +33,14 @@ public class UserModel implements Serializable {
         this.isOnline = isOnline;
     }
 
-    public UserModel(String userName, String emailAddress, String password, String ipAddress) {
+    public UserModel(String userName, String emailAddress, String password, String ipAddress) throws RemoteException{
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
         this.emailAddress = emailAddress;
     }
 
-    public UserModel() {
+    public UserModel() throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
