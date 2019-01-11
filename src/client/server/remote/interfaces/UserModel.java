@@ -46,11 +46,6 @@ public class UserModel implements Serializable {
         this.emailAddress = emailAddress;
     }
 
-
-    
-
-  
-
     public String getIpAddress() {
         return ipAddress;
     }
