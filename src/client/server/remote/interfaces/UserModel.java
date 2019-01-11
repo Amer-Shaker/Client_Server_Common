@@ -16,11 +16,11 @@ public class UserModel implements Serializable {
     private long score;
     private boolean isOnline;
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)throws RemoteException {
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)  {
         this(ipAddress, userName, password, emailAddress, "available", numberOfWinedMatches, numberOfLostMatches, score, isOnline);
     }
 
-    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline) throws RemoteException {
+    public UserModel(String ipAddress, String userName, String password, String emailAddress, String status, int numberOfWinedMatches, int numberOfLostMatches, long score, boolean isOnline)  {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
@@ -33,7 +33,7 @@ public class UserModel implements Serializable {
         this.isOnline = isOnline;
     }
 
-    public UserModel(String userName, String emailAddress, String password, String ipAddress) throws RemoteException{
+    public UserModel(String userName, String emailAddress, String password, String ipAddress) {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;

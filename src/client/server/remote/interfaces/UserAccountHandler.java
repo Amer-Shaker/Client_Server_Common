@@ -21,7 +21,7 @@ public interface UserAccountHandler extends Remote {
 
     public List<UserModel> getAllPlayer() throws RemoteException;
 
-    public boolean reuestGae(/*two player */) throws RemoteException;
+    public boolean reuestGaem(UserModel player1,UserModel player2) throws RemoteException;
 
     public void transmitMove(Step step) throws RemoteException;
     public boolean isServerUponRunning() throws RemoteException;
