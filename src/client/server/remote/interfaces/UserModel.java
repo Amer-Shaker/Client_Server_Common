@@ -38,11 +38,7 @@ public class UserModel implements Serializable {
         this.isOnline = isOnline;
     }
 
-    public UserModel(String userName, String emailAddress, String password, String ipAddress) {
-        this.ipAddress = ipAddress;
-        this.userName = userName;
-        this.password = password;
-        this.emailAddress = emailAddress;
+    public UserModel(String text, String text0, String text1, String ipAddress) {
     }
 
     public String getIpAddress() {
