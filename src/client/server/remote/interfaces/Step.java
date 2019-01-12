@@ -5,6 +5,11 @@ import java.io.Serializable;
 public class Step implements Serializable {
 
     public String player;
+    String currentPlayer ;
+
+    public String getCurrentPlayer() {
+        return currentPlayer;
+    }
     public int position;
     public String draw;
 
@@ -20,10 +25,16 @@ public class Step implements Serializable {
         this.draw = draw;
     }
 
-    public Step(String player, int position, String draw) {
+    public void setCurrentPlayer(String CurrentPlayer) {
+        this.currentPlayer = CurrentPlayer;
+    }
+
+    public Step(String player, String currentPlayer,int position, String draw) {
         this.player = player;
         this.position = position;
         this.draw = draw;
+        this.currentPlayer = currentPlayer;
+        
     }
 
     public String getPlayer() {
