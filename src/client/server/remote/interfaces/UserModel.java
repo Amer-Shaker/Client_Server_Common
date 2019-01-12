@@ -39,6 +39,10 @@ public class UserModel implements Serializable {
     }
 
     public UserModel(String text, String text0, String text1, String ipAddress) {
+        this.userName = text;
+        this.password = text0;
+        this.emailAddress = text1;
+        this.ipAddress = ipAddress;
     }
 
     public String getIpAddress() {
