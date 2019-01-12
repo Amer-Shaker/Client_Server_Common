@@ -13,7 +13,7 @@ public interface UserAccountHandler extends Remote {
 
     public boolean signUp(UserModel user) throws RemoteException;
 
-    public void logOut(UserModel user) throws RemoteException;
+    public boolean logOut(String emailAddress) throws RemoteException;
 
     public void tellOthers(UserModel user1, UserModel user2) throws RemoteException;
 
