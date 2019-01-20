@@ -21,13 +21,18 @@ public interface UserAccountHandler extends Remote {
 
     public abstract List<UserModel> getAllPlayer() throws RemoteException;
 
+    // public abstract int requestGame(UserModel player1, UserModel player2) throws RemoteException;
     public abstract boolean requestGame(UserModel player1, UserModel player2) throws RemoteException;
 
     public abstract void transmitMove(Step step) throws RemoteException;
 
     public abstract boolean isServerUponRunning() throws RemoteException;
 
-    public abstract void sendMessage(UserModel player1, String Message, UserModel player2) throws RemoteException;
+    public abstract void sendMessage(UserModel player1, UserModel player2, String message) throws RemoteException;
 
     public abstract void acceptRequest() throws RemoteException;
+
+    public abstract int increaseWinnerScore(String emailAddress) throws RemoteException;
+    
+    public abstract void closeGame(UserModel player1, UserModel player2) throws RemoteException;
 }

@@ -124,4 +124,6 @@ public class UserModel implements Serializable {
     public void setOnline(boolean online) {
         isOnline = online;
     }
+
+   
 }
