@@ -9,7 +9,7 @@ public interface ClientInterface extends Remote {
 
     public void startGame(UserModel player1, UserModel player2) throws RemoteException;
 
-    public void refreshOnlineUsersList(UserModel user) throws RemoteException;
+    public void refreshOnlineUsersList(UserModel user, boolean isLoggedIn) throws RemoteException;
 
     public void drawMove(Step s) throws RemoteException;
 
