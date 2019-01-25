@@ -15,13 +15,8 @@ public interface UserAccountHandler extends Remote {
 
     public abstract boolean logOut(String emailAddress) throws RemoteException;
 
-    public abstract void tellOthers(UserModel user1, UserModel user2) throws RemoteException;
+    public abstract List<UserModel> getOnlinePlayers() throws RemoteException;
 
-    public abstract List<UserModel> getOnlinePlayer() throws RemoteException;
-
-    public abstract List<UserModel> getAllPlayer() throws RemoteException;
-
-    // public abstract int requestGame(UserModel player1, UserModel player2) throws RemoteException;
     public abstract boolean requestGame(UserModel player1, UserModel player2) throws RemoteException;
 
     public abstract void transmitMove(Step step) throws RemoteException;
@@ -30,9 +25,7 @@ public interface UserAccountHandler extends Remote {
 
     public abstract void sendMessage(UserModel player1, UserModel player2, String message) throws RemoteException;
 
-    public abstract void acceptRequest() throws RemoteException;
-
     public abstract int increaseWinnerScore(String emailAddress) throws RemoteException;
-    
+
     public abstract void closeGame(UserModel player1, UserModel player2) throws RemoteException;
 }
