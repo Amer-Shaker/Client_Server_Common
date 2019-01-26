@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 
 public interface ClientInterface extends Remote {
 
-    public boolean requestGame(UserModel model1, UserModel player2) throws RemoteException;
+    public int requestGame(UserModel model1, UserModel player2) throws RemoteException;
 
     public void startGame(UserModel player1, UserModel player2) throws RemoteException;
 
